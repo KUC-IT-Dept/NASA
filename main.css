@@ -25,7 +25,7 @@ header .center-logo {
 
 /* 🔹 Individual customizations */
 .left-logo {
-  width: 200px; ;
+  width: 130px; ;
 }
 
 .center-logo {
@@ -74,7 +74,7 @@ body {
   left: 0;
   width: 200%;
   height: 100%;
-  background: url("pic.png") repeat-x;
+  background: url("asfg.png") repeat-x;
   animation: scrollBG 30s linear infinite;
   background-size: contain;
   opacity: 0.5;
@@ -123,35 +123,25 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;   /* stack vertically */
-    position: relative;
-    gap: 10px;
-  }
-
   header .center-logo {
-    position: relative;  /* no absolute */
-    transform: none;
-    left: auto;
-  }
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
   .left-logo {
-    width: 100px;
+  width: 50px; ;
   }
   .center-logo {
-    width: 100px;
+    width: 80px;  /* big */
   }
   .right-logo {
-    width: 80px;
+    width: 100px;   /* medium */
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 30px;
-  }
-
-  .buttons {
-    gap: 20px;
   }
 }
 @keyframes scrollBG {
