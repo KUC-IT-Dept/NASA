@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url("moon.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  border: 8px solid #222;
+  min-height: 100vh;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  text-align: left;
+  background: rgba(0,0,0,0.35); /* 🔹 subtle glass effect */
+  backdrop-filter: blur(8px);
+}
+
+.card h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #f0d643;
+  margin-top: 20px;
+}
+
+.card p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+}
+
+a {
+  color: #d9dfe5;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: rgb(93, 152, 207);
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    border-width: 5px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .card h2 {
+    font-size: 1.1em;
+  }
+
+  .card p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 250px; /* shorter map for mobile */
+  }
+}

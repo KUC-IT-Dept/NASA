@@ -1,0 +1,176 @@
+:root{
+  --bg-image: url("mooonn.jpg"); /* 🔹 Replace with your background image */
+  --accent: #d9df20;
+  --text: rgba(255,255,255,0.98);   /* bright readable text */
+  --muted: rgba(255,255,255,0.9);   /* paragraph text */
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Orbitron", sans-serif;
+  background: url("moon.png") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 6%;
+  backdrop-filter: blur(5px); /* subtle blur effect */
+}
+
+h1{
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.card{
+  width: 100%;
+  max-width: 900px;
+  height: 80vh;
+  background: rgba(255,255,255,0.05);  /* transparent glass */
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 28px;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.card:hover{
+  background: rgba(255,255,255,0.08); /* subtle glow */
+}
+
+.card h2{
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  color:rgb(228, 242, 81);
+}
+
+.card p{
+  margin-bottom: 1rem;
+  color: var(--muted);
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.highlight{
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Scrollbar styling */
+.card::-webkit-scrollbar {
+  width: 8px;
+}
+.card::-webkit-scrollbar-track {
+  background: transparent;
+}
+.card::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 4px;
+}
+.card::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.45);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;   /* 🔹 removes underline */
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #8a8484;
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 4%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    height: auto;       /* let it grow naturally on small screens */
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .btn {
+    width: 100%;        /* buttons span full width on mobile */
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .card h2 {
+    font-size: 0.9rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}
