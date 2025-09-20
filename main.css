@@ -74,7 +74,7 @@ body {
   left: 0;
   width: 200%;
   height: 100%;
-  background: url("asfg.png") repeat-x;
+  background: url("pic.png") repeat-x;
   animation: scrollBG 30s linear infinite;
   background-size: contain;
   opacity: 0.5;
@@ -130,13 +130,13 @@ h1 {
 }
 
   .left-logo {
-  width: 50px; ;
+  width: 90px; ;
   }
   .center-logo {
-    width: 80px;  /* big */
+    width: 120px;  /* big */
   }
   .right-logo {
-    width: 100px;   /* medium */
+    width: 120px;   /* medium */
   }
 
   h1 {
