@@ -25,7 +25,7 @@ header .center-logo {
 
 /* 🔹 Individual customizations */
 .left-logo {
-  width: 130px; ;
+  width: 200px; ;
 }
 
 .center-logo {
@@ -130,7 +130,7 @@ h1 {
 }
 
   .left-logo {
-  width: 90px; ;
+  width: 120px; ;
   }
   .center-logo {
     width: 120px;  /* big */
