@@ -1,43 +1,3 @@
-header {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  width: 100%;
-  padding: 0 20px;
-
-  display: flex;
-  justify-content: space-between; /* Left & Right logos */
-  align-items: center;
-}
-
-/* 🔹 Center logo stays in middle */
-header .center-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 🔹 Base style */
-.logo {
-  width:auto;
-  max-width: 30vw;
-  height: auto;
-  display: block;
-}
-
-/* 🔹 Individual customizations */
-.left-logo {
-  width: 200px; ;
-}
-
-.center-logo {
-  width: 220px;  /* big */
-}
-
-.right-logo {
-  width: 300px;   /* medium */
-}
-
 
 * {
   margin: 0;
@@ -52,9 +12,10 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>") 16 0,auto;
+  align-items: center;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>") 16 0, auto;
 }
+
 
 .container {
   position: relative;
@@ -65,10 +26,6 @@ body {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  padding-top: 120px;
-  min-height: 100dvh;
-  
-
 }
 
 .container::before {
@@ -83,8 +40,50 @@ body {
   background-size: contain;
   opacity: 0.5;
   z-index: -1;
-  
 }
+
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10;
+}
+
+
+header .center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+}
+
+
+.logo {
+  display: block;
+  height: auto;
+}
+
+
+.left-logo {
+  width: 160px;
+}
+
+.center-logo {
+  width: 180px;
+}
+
+.right-logo {
+  width: 160px;
+}
+
 
 .content {
   display: flex;
@@ -94,7 +93,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(1.2rem,5vw,3rem);
+  font-size: 3rem;
   letter-spacing: 5px;
   font-family: "Orbitron", sans-serif;
   margin-bottom: 60px;
@@ -108,7 +107,7 @@ h1 {
 }
 
 .btn {
-  background:transparent;
+  background: transparent;
   border: 2px solid white;
   padding: 12px 30px;
   border-radius: 25px;
@@ -116,38 +115,46 @@ h1 {
   text-transform: uppercase;
   color: white;
   cursor: pointer;
-  text-decoration: none;   /* 🔹 removes underline */
+  text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
   background: #8a8484;
-  padding:15px 60px;
+  padding: 15px 60px;
 }
+
 
 @media (max-width: 768px) {
-  header .center-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-  .left-logo {
-  width: 120px; ;
-  }
-  .center-logo {
-    width: 120px;  /* big */
-  }
+  .left-logo,
   .right-logo {
-    width: 120px;   /* medium */
+    width: 130px;
+  }
+
+  .center-logo {
+    width: 150px;
   }
 
   h1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
   }
 }
+
+
+@media (max-width: 480px) {
+  .left-logo,
+  .right-logo {
+    width: 100px;
+  }
+
+  .center-logo {
+    width: 120px;
+  }
+}
+
+
 @keyframes scrollBG {
   0% {
     transform: translateX(0);
