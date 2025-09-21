@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Ordering</title>
+  <link rel="stylesheet" href="food.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Food Options</h1>
+
+  <div class="menu-container">
+    <!-- Day 1 -->
+    <div class="day">
+      <h2>Oct 4</h2>
+
+      <div class="meal">
+        <h3>Lunch</h3>
+        <div class="food-item">
+          <img src="veg-biriyani.jpeg" alt="Veg Biriyani">
+          <p>Veg Biriyani - ₹120</p>
+          <button onclick="addToCart('Veg Biriyani (Oct 4)', 120)">Add</button>
+        </div>
+        <div class="food-item">
+          <img src="chicken-biryani.jpeg" alt="Chicken Biryani">
+          <p>Chicken Biryani - ₹150</p>
+          <button onclick="addToCart('Chicken Biryani (Oct 4)', 150)">Add</button>
+        </div>
+      </div>
+
+      <div class="meal">
+        <h3>Evening Snacks</h3>
+        <div class="food-item">
+          <img src="tea.jpeg" alt="Tea">
+          <p>Tea - ₹30</p>
+          <button onclick="addToCart('Tea (Oct 4)', 30)">Add</button>
+        </div>
+        <div class="food-item">
+          <img src="pazhampori.jpeg" alt="Pazhampori">
+          <p>Pazhampori - ₹40</p>
+          <button onclick="addToCart('Pazhampori (Oct 4)', 40)">Add</button>
+        </div>
+      </div>
+
+      <div class="meal">
+        <h3>Dinner</h3>
+        <div class="food-item">
+          <img src="chapatich.jpeg" alt="Chapati & Chicken">
+          <p>Chapati & Chicken - ₹100</p>
+          <button onclick="addToCart('Chapati & Chicken (Oct 4)', 100)">Add</button>
+        </div>
+        <div class="food-item">
+          <img src="chapatikur.jpeg" alt="Chapati & Kuruma">
+          <p>Chapati & Kuruma - ₹120</p>
+          <button onclick="addToCart('Chapati & Kuruma (Oct 4)', 120)">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day">
+      <h2>Oct 5</h2>
+
+      <div class="meal">
+        <h3>Breakfast</h3>
+        <div class="food-item">
+          <img src="puttu.jpeg" alt="Puttu & Kadala">
+          <p>Puttu & Kadala - ₹40</p>
+          <button onclick="addToCart('Puttu & Kadala (Oct 5)', 40)">Add</button>
+        </div>
+        <div class="food-item">
+          <img src="poori.jpeg" alt="Poori & Baaji">
+          <p>Poori & Baaji - ₹70</p>
+          <button onclick="addToCart('Poori & Baaji (Oct 5)', 70)">Add</button>
+        </div>
+        <div class="food-item">
+          <img src="appam.webp" alt="Appam & Egg Curry">
+          <p>Appam & Egg Curry - ₹40</p>
+          <button onclick="addToCart('Appam & Egg Curry (Oct 5)', 40)">Add</button>
+        </div>
+      </div>
+
+      <div class="meal">
+        <h3>Lunch</h3>
+        <div class="food-item">
+          <img src="meals.jpeg" alt="Meals">
+          <p>Meals - ₹130</p>
+          <button onclick="addToCart('Meals (Oct 5)', 130)">Add</button>
+        </div>
+      </div>
+
+      <div class="meal">
+        <h3>Evening Snacks</h3>
+        <div class="food-item">
+          <img src="tea.jpeg" alt="Tea">
+          <p>Tea - ₹30</p>
+          <button onclick="addToCart('Tea (Oct 5)', 30)">Add</button>
+        </div>
+        <div class="food-item">
+          <img src="pazhampori.jpeg" alt="Pazhampori">
+          <p>Pazhampori - ₹50</p>
+          <button onclick="addToCart('Pazhampori (Oct 5)', 50)">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Section -->
+  <div class="cart">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <h3>Total: <span id="cart-total">₹0</span></h3>
+    <button class="checkout" onclick="checkout()">Checkout with GPay</button>
+  </div>
+
+  <script src="food.js"></script>
+</body>
+</html>

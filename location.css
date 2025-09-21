@@ -47,7 +47,7 @@ h1 {
 }
 
 a {
-  color: #d9dfe5;
+  color: #99ed9f;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -63,7 +63,6 @@ a:hover {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-
 /* 📱 Responsive adjustments */
 @media (max-width: 768px) {
   body {
